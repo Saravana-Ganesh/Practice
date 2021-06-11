@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class>  
+	<teacher>
+		<id>1</id>  
+        <name>Sakthi Vadivelu</name>  
+        <marks>100</marks>  
+	</teacher>
+    <student>  
+        <id>101</id>  
+        <name>Saravana</name>  
+        <marks>83</marks>  
+    </student>  
+      
+    <student>  
+        <id>102</id>  
+        <name>Govindh</name>  
+        <marks>90</marks>  
+    </student>  
+  
+
+  
+</class>  
