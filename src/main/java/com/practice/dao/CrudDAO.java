@@ -41,7 +41,7 @@ public class CrudDAO {
 	            System.out.println(TableConstants.STUDENT_ID+": " + resultSet.getInt(TableConstants.STUDENT_ID));
 	            System.out.println(TableConstants.STUDENT_NAME+": " + resultSet.getString(TableConstants.STUDENT_NAME));
 	            System.out.println(TableConstants.STUDENT_DEPARTMENT+": " + resultSet.getString(TableConstants.STUDENT_DEPARTMENT));
-	         }
+			}
 	      } catch (SQLException e) {
 	         e.printStackTrace();
 	      } 
@@ -92,7 +92,7 @@ public class CrudDAO {
 			e.printStackTrace();
 		}
 	}
-	public void WriteInFile() {
+	public boolean WriteInFile() {
 
 		try(	Statement statement = connection.createStatement();
 				FileWriter fw=new FileWriter("StudentTableRecords.txt");
@@ -107,8 +107,10 @@ public class CrudDAO {
 				out.println(resultSet.getString(TableConstants.STUDENT_DEPARTMENT)+"	");	       
 	         }
 			out.flush();
+			return true;
 	      } catch (Exception e) {
 	         e.printStackTrace();
+	         return false;
 	      } 
 	
 	}

@@ -14,7 +14,7 @@ public class DBUtils {
 	private DBUtils(){			
 		try{  			
 			//load the driver class  
-			Class.forName(DBConstants.DRIVER_NAME.trim());  
+			Class.forName(DBConstants.DRIVER_NAME);  
 			//create  the connection object  
 			connection = DriverManager.getConnection(DBConstants.URL,DBConstants.USERNAME,DBConstants.PASSWORD);
 		}

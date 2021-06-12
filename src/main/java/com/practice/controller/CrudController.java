@@ -15,7 +15,7 @@ public class CrudController {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter your choice\n1.Read\n2.Insert\n3.Update\n4.delete"
-				+ "\n5.Read In File");
+				+ "\n5.Write In File");
 		int choice = sc.nextInt();
 		CrudController.executeChoice(choice);
 		System.exit(0);
@@ -65,9 +65,11 @@ public class CrudController {
 				crudBO.setId(sc.nextInt());
 				crudDAO.delete(crudBO);
 				break;
-			case 5:
-				System.out.println("Writting In File\n");
-				crudDAO.WriteInFile();
+			case 5:				
+				if(crudDAO.WriteInFile())
+					System.out.println("Table details written in file sucessfully");
+				else
+					System.out.println("Error Occured");
 				break;
 			default:
 				System.out.println("\nInvalid Choice");
